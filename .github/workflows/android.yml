@@ -42,6 +42,10 @@ jobs:
       - name: Build debug APK
         run: gradle assembleDebug --stacktrace --info
 
+    
+      - name: Validate AndroidManifest XML
+        run: python3 -c "import xml.etree.ElementTree as ET; ET.parse('app/src/main/AndroidManifest.xml'); print('Manifest XML is valid')"
+
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
