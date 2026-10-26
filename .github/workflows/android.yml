@@ -43,7 +43,7 @@ jobs:
         run: python3 -c "import xml.etree.ElementTree as ET; ET.parse('app/src/main/AndroidManifest.xml'); print('Manifest XML is valid')"
 
 
-       - name: Validate AndroidManifest XML
+      - name: Validate AndroidManifest XML
         run: python3 -c "import xml.etree.ElementTree as ET; ET.parse('app/src/main/AndroidManifest.xml'); print('Manifest XML is valid')"
 
       - name: Build debug APK
